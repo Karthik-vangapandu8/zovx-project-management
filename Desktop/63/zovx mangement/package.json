@@ -1,0 +1,26 @@
+{
+  "name": "zovx-project-management",
+  "version": "1.0.0",
+  "description": "Advanced Project Management System for Zovx Labs",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && nodemon index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "start": "cd server && npm start",
+    "postinstall": "cd server && npm install && npx prisma generate",
+    "deploy": "cd client && npm run build"
+  },
+  "keywords": ["project-management", "team-collaboration", "zovx-labs"],
+  "author": "Zovx Labs",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+} 
