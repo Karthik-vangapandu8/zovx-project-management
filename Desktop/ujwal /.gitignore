@@ -77,7 +77,7 @@ logs
 .env.production
 
 # EAS Build
-eas.json
+# eas.json is needed for builds
 
 # Don't track parent directories
 ../
